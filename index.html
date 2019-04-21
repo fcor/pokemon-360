@@ -9,17 +9,40 @@
   <script src="./environment.js"></script>
 </head>
 <body>
-  <a-scene environment="preset: forest; seed: 123; shadowSize: 5;">
-    <require path="templates/assets.html"></require>
-  
-    <!-- Box. -->
-    <a-entity geometry="primitive: box" material="color: #4CC3D9" position="-1 0.5 -3" rotation="0 45 0" shadow></a-entity>
-  
-    <!-- Sphere. -->
-    <a-entity geometry="primitive: sphere; radius: 1.25" material="color: #EF2D5E" position="0 1.25 -5" shadow></a-entity>
-  
-    <!-- Cylinder. -->
-    <a-entity geometry="primitive: cylinder; radius: 0.5; height: 1.5" material="color: #FFC65D" position="1 0.75 -3" shadow spin></a-entity>
+  <a-scene environment="preset: forest; seed: 39; shadowSize: 5;">
+    <a-assets>
+      <a-asset-item id="bulbasaur-obj" src="assets/bulbasaur/bulbasaur-pokemon-go.obj"></a-asset-item>
+      <a-asset-item id="bulbasaur-mtl" src="assets/bulbasaur/bulbasaur-pokemon-go.mtl"></a-asset-item>
+      <a-asset-item id="scyther-obj" src="assets/scyther/scyther-pokemon-go.obj"></a-asset-item>
+      <a-asset-item id="scyther-mtl" src="assets/scyther/scyther-pokemon-go.mtl"></a-asset-item>
+      <a-asset-item id="diglett" src="assets/diglett/scene.gltf"></a-asset-item>
+      <a-asset-item id="butterfree" src="assets/butterfree/scene.gltf"></a-asset-item>
+      <a-asset-item id="weedle" src="assets/weedle/scene.gltf"></a-asset-item>
+      <a-asset-item id="bellsprout" src="assets/bellsprout/scene.gltf"></a-asset-item>
+    </a-assets>
+
+    <a-entity obj-model="obj: #bulbasaur-obj; mtl: #bulbasaur-mtl" position="-2 0 -7" rotation="0 90 0" scale="0.15 0.15 0.15"> </a-entity>
+    <a-entity obj-model="obj: #scyther-obj; mtl: #scyther-mtl" position="7 0 -7" rotation="0 -90 0" scale="0.15 0.15 0.15"> </a-entity>
+
+    <!-- Bellsprouts -->
+    <a-entity gltf-model="#bellsprout" position="0 0 -1" rotation="0 180 0" scale="0.15 0.15 0.15"> </a-entity>
+    <a-entity gltf-model="#bellsprout" position="0 0 0" rotation="0 180 0" scale="0.15 0.15 0.15"> </a-entity>
+
+    <!-- Buterfrees -->
+    <a-entity gltf-model="#butterfree" position="2 4.5 -1" rotation="0 90 -30" scale="0.15 0.15 0.15"> </a-entity>
+    <a-entity gltf-model="#butterfree" position="6 4.5 -1.5" rotation="0 110 -30" scale="0.15 0.15 0.15"> </a-entity>
+    
+    <!-- Weedles -->
+    <a-entity gltf-model="#weedle" position="1 0 1" rotation="0 -90 0" scale="0.15 0.15 0.15"> </a-entity>
+    <a-entity gltf-model="#weedle" position="4 0 0" rotation="0 -70 0" scale="0.15 0.15 0.15"> </a-entity>
+
+    <!-- Digletts -->
+    <a-entity gltf-model="#diglett" position="1 0 -15" rotation="0 -93 0" scale="0.15 0.15 0.15"> </a-entity>
+    <a-entity gltf-model="#diglett" position="-1 0 -14" rotation="0 -95 0" scale="0.15 0.15 0.15"> </a-entity>
+    <a-entity gltf-model="#diglett" position="3 0 -12" rotation="0 -87 0" scale="0.15 0.15 0.15"> </a-entity>
+    <a-entity gltf-model="#diglett" position="2 0 -13" rotation="0 -90 0" scale="0.15 0.15 0.15"> </a-entity>
+    <a-entity gltf-model="#diglett" position="2 0 -11" rotation="0 -80 0" scale="0.15 0.15 0.15"> </a-entity>
+    <a-entity gltf-model="#diglett" position="4 0 -13" rotation="0 -85 0" scale="0.15 0.15 0.15"> </a-entity>
   </a-scene>
 </body>
 </html>
